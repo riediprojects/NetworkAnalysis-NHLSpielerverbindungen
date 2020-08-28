@@ -3,7 +3,7 @@
 ## Kurz
 ### Ziel
 Aus verschiedenen Datenquellen werden ca. 456'750 Datensätze aus der NHL-API verarbeitet. Diese Datensätze enthalten Infomrationen zu Spielern, Teams und Seasons. 
-Die Informationen sollen mittels einer Netzwerkanalyse beispielsweise so analysiert werden, dass Spieler, die ihrem Verein längere Zeit true bleiben, identifiziert werden können. 
+Die Informationen sollen mittels einer Netzwerkanalyse beispielsweise so analysiert werden, dass Spieler, die ihrem Verein über eine längere Zeit treu blieben, identifiziert werden können. 
 
 ![Titelbild](TitleImage.jpg)
 
@@ -23,15 +23,17 @@ Die Knoten im Netzwerk bilden die einzelnen Spieler. Die Kanten haben die Bedeut
 
 ## Vorgang
 ### 1 Datenbeschaffung
-Daten werden von der NHL über ihre Stats-API (https://statsapi.web.nhl.com/api/v1, abgerufen </br>
+Daten werden von der NHL über ihre Stats-API https://statsapi.web.nhl.com/api/v1, abgerufen. </br>
 In einem ersten Schritt wurde ein API-Fetcher in Python programmiert, der in Form eines Jupyter Notebooks die benötigten API-Calls pro Jahr durchführt. Die geladenen Daten einer Anfrage werden dabei als JSON-Datei (UTF8-Encoding) gespeichert, damit diese zu einem späteren Zeitpunkt nicht erneut geladen werden müssen. 
 
 Detailliertere Informationen zur Datenbeschaffung (S.1-2): [Dokumentation Datenbeschaffung](./Dokumentation/DokumentationDatenbeschaffung.pdf) </br>
 
 ### 2 Datenaufbereitung
-Mit KNIME werden die gesammelten Daten aus den JSON-Files zu einem Node- und einem Edge-Table transformiert, sodass sie später in Gephi optimal eingesetzt werden können.
+Mit KNIME werden die gesammelten Daten aus den JSON-Files zu einem Node- und einem Edge-Table transformiert, sodass sie später in Gephi optimal eingesetzt werden können. </br>
 [KNIME Workflow](./Source/Knime/SNA_Projekt.knwf)
+
 ![KNIME Workflow](./KNIME.jpg)
+
 Detailliertere Informationen zur Datenaufbereitung (S.2-7): [Dokumentation Datenbeschaffung](./Dokumentation/DokumentationDatenbeschaffung.pdf) </br>
 
 ### 3 Datenanalyse
