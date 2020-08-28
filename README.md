@@ -2,8 +2,10 @@
 
 ## Kurz
 ### Ziel
-Aus verschiedenen Datenquellen verarbeiten wir ca. 456'750 Datensätze aus der NHL-API. Diese Datensätze enthalten Infomrationen zu Spielern, Teams und Seasons. 
-Diese Daten sollen mittels einer Netzwerkanalyse so analysiert werden, dass beispielsweise Spieler, die ihrem Verein über längere Zeit true blieben, indentifiziert werden können. Als weiteres Beispiel soll auch untersucht werden, ob sich bestimmte Cliquen unter den Spielern gebildet haben.  
+Aus verschiedenen Datenquellen werden ca. 456'750 Datensätze aus der NHL-API verarbeitet. Diese Datensätze enthalten Infomrationen zu Spielern, Teams und Seasons. 
+Die Informationen sollen mittels einer Netzwerkanalyse beispielsweise so analysiert werden, dass Spieler, die ihrem Verein längere Zeit true bleiben, identifiziert werden können. 
+
+![Titelbild](TitleImage.jpg)
 
 ### Projekt-Team
 •	Riedi Manuel </br>
@@ -20,21 +22,21 @@ Diese Daten sollen mittels einer Netzwerkanalyse so analysiert werden, dass beis
 Die Knoten im Netzwerk bilden die einzelnen Spieler. Die Kanten haben die Bedeutung «hat zusammen gespielt mit» und können mit verschiedenen Werten, wie z.B. Anzahl Spiele, Anzahl Saisons oder Anzahl verschiedene gemeinsame Teams gewichtet werden. Es handelt sich somit um ein One-Mode-Netzwerk.
 
 ## Vorgang
-### 1 Datenbeschafung
+### 1 Datenbeschaffung
 Daten werden von der NHL über ihre Stats-API (https://statsapi.web.nhl.com/api/v1, abgerufen </br>
 In einem ersten Schritt wurde ein API-Fetcher in Python programmiert, der in Form eines Jupyter Notebooks die benötigten API-Calls pro Jahr durchführt. Die geladenen Daten einer Anfrage werden dabei als JSON-Datei (UTF8-Encoding) gespeichert, damit diese zu einem späteren Zeitpunkt nicht erneut geladen werden müssen. 
 
-Detailiertere Informationen zur Datenbeschafung (S.1-2): [Dokumentation Datenbeschaffung](./Dokumentation/DokumentationDatenbeschaffung.pdf) </br>
+Detailliertere Informationen zur Datenbeschaffung (S.1-2): [Dokumentation Datenbeschaffung](./Dokumentation/DokumentationDatenbeschaffung.pdf) </br>
 
 ### 2 Datenaufbereitung
 Mit KNIME werden die gesammelten Daten aus den JSON-Files zu einem Node- und einem Edge-Table transformiert, sodass sie später in Gephi optimal eingesetzt werden können.
 [KNIME Workflow](./Source/Knime/SNA_Projekt.knwf)
 ![KNIME Workflow](./KNIME.jpg)
-Detailiertere Informationen zur Datenaufbereitung (S.2-7): [Dokumentation Datenbeschaffung](./Dokumentation/DokumentationDatenbeschaffung.pdf) </br>
+Detailliertere Informationen zur Datenaufbereitung (S.2-7): [Dokumentation Datenbeschaffung](./Dokumentation/DokumentationDatenbeschaffung.pdf) </br>
 
 ### 3 Datenanalyse
 Für die Analyse mittels Graphen wurde die freie Software Gephi verwendet. Es werden folgend drei untersuchte Analysen vorgestellt. 
-Für detailiertere Informationen bitte: [Dokumentation Soziale Netzwerkanalyse](./Dokumentation/DokumentationSozialeNetzwerkanalyse.pdf) verwenden.</br>
+Für detailliertere Informationen über die Analysen bitte [Dokumentation Soziale Netzwerkanalyse](./Dokumentation/DokumentationSozialeNetzwerkanalyse.pdf) verwenden.</br>
 
 #### Analyse: Vertrauten Mitspieler
 Bei dieser Untersuchung sollen die Spieler identifiziert werden, welche auf eine grosse bzw. kleine Anzahl vertrauter Mitspieler setzen können. Um eine Aussage diesbezüglich machen zu können, werden zwei folgende Überlegungen über die Spieler-Knoten gemacht:
@@ -44,7 +46,7 @@ hohe Anzahl vertrauter Spieler aufweisen.
 
 ![VertrauteMitspieler](./TrustedPlayer.jpg)
 
-#### Analye: Gegenüberstellung von «guten» und «schlechten» Teams
+#### Analyse: Gegenüberstellung von «guten» und «schlechten» Teams
 Bei dieser Analyse sollen eher bessere und eher schlechtere Teams aus einem gewissen Zeitraum gegenübergestellt werden. Dabei wurde anhand von Zentralitätswerten untersucht, ob treue Spieler einen Einfluss auf den Erfolg eines Teams haben. Ob eher gleich bleibende Kader ohne viele Spielerwechsel zum Erfolg beitragen können, wurde über die Dichte des Netzwerks versucht herauszufinden.
 
 ![GuteUndSchlechteTeams](./GoodBadTeams.jpg)
