@@ -15,7 +15,7 @@ Die Informationen sollen mittels einer Netzwerkanalyse beispielsweise so analysi
 ### Tools
 •	Gephi </br>
 •	Python </br>
-•	Json </br>
+•	JSON </br>
 •	KNIME
 
 ### Bedeutung Knoten und Kanten
