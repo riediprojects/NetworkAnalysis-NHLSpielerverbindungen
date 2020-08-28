@@ -1,21 +1,22 @@
 # Netzwerk Analyse für NHL Spieler
 
-## Ziel
+## Kurz
+### Ziel
 Aus verschiedenen Datenquellen verarbeiten wir ca. 456'750 Datensätze aus der NHL-API. Diese Datensätze enthalten Infomrationen zu Spielern, Teams und Seasons. 
 Diese Daten sollen mittels einer Netzwerkanalyse so analysiert werden, dass beispielsweise Spieler, die ihrem Verein über längere Zeit true blieben, indentifiziert werden können. Als weiteres Beispiel soll auch untersucht werden, ob sich bestimmte Cliquen unter den Spielern gebildet haben.  
 
-## Projekt-Team
+### Projekt-Team
 •	Riedi Manuel </br>
 •	Hürzeler Janick </br>
 •	Winter Joël
 
-## Tools
+### Tools
 •	Gephi </br>
 •	Python </br>
 •	Json </br>
 •	KNIME
 
-## Bedeutung Knoten und Kanten
+### Bedeutung Knoten und Kanten
 Die Knoten im Netzwerk bilden die einzelnen Spieler. Die Kanten haben die Bedeutung «hat zusammen gespielt mit» und können mit verschiedenen Werten, wie z.B. Anzahl Spiele, Anzahl Saisons oder Anzahl verschiedene gemeinsame Teams gewichtet werden. Es handelt sich somit um ein One-Mode-Netzwerk.
 
 ## Vorgang
@@ -29,6 +30,8 @@ Detailiertere Informationen zur Datenbeschafung (S.1-2): [Dokumentation Datenbes
 Mit KNIME werden die gesammelten Daten aus den JSON-Files zu einem Node- und einem Edge-Table transformiert, sodass sie später in Gephi optimal eingesetzt werden können.
 [KNIME Workflow](./Source/Knime/SNA_Projekt.knwf)
 
+![KNIME Workflow](./KNIME.jpg)
+
 Detailiertere Informationen zur Datenaufbereitung (S.2-7): [Dokumentation Datenbeschaffung](./Dokumentation/DokumentationDatenbeschaffung.pdf) </br>
 
 ### 3 Datenanalyse
@@ -38,14 +41,14 @@ Bei dieser Untersuchung sollen die Spieler identifiziert werden, welche auf eine
 • Spieler mit niedriger “Degree Centrality” und verhältnismässig hoher “WeightedDegree Centrality”, bleiben ihrem Team eher treu und sollten daher auch eher eine
 hohe Anzahl vertrauter Spieler aufweisen.
 
-![VertrauteMitspieler](...jpg)
+![VertrauteMitspieler](./TrustedPlayer.jpg)
 
 #### Analye: Gegenüberstellung von «guten» und «schlechten» Teams
 Bei dieser Analyse sollen eher bessere und eher schlechtere Teams aus einem gewissen Zeitraum gegenübergestellt werden. Dabei wurde anhand von Zentralitätswerten untersucht, ob treue Spieler einen Einfluss auf den Erfolg eines Teams haben. Ob eher gleich bleibende Kader ohne viele Spielerwechsel zum Erfolg beitragen können, wurde über die Dichte des Netzwerks versucht herauszufinden.
 
-![GuteUndSchlechteTeams](...jpg)
+![GuteUndSchlechteTeams](./GoodBadTeams.jpg)
 
-Detailiertere Informationen zur Analyse: [Dokumentation Datenbeschaffung](./Dokumentation/DokumentationDatenbeschaffung.pdf) </br>
+Detailiertere Informationen zur Analyse: [Dokumentation Soziale Netzwerkanalyse](./Dokumentation/DokumentationSozialeNetzwerkanalyse.pdf) </br>
 
 #### Analyse: Cliquen
 Bei dieser Analyse wurde untersucht, ob sich verschiedene Cliquen gebildet haben. Für den k-Core wurde die Grenzwerte für k ermittelt. In den gefundenen Cliquen wurde die Betweenness-Centrality für eher treue und untreue Spieler im Detail analysiert.
