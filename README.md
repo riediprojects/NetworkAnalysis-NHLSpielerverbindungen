@@ -12,7 +12,7 @@ Die Informationen sollen mittels einer Netzwerkanalyse beispielsweise so analysi
 •	Hürzeler Janick </br>
 •	Winter Joël
 
-### Tools
+### Technologien
 •	Gephi </br>
 •	Python </br>
 •	JSON </br>
