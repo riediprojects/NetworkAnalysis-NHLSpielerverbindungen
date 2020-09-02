@@ -24,7 +24,7 @@ Die Knoten im Netzwerk bilden die einzelnen Spieler. Die Kanten haben die Bedeut
 ## Vorgang
 ### 1 Datenbeschaffung
 Daten werden von der NHL über ihre Stats-API https://statsapi.web.nhl.com/api/v1, abgerufen. </br>
-In einem ersten Schritt wurde ein API-Fetcher in Python programmiert, der in Form eines Jupyter Notebooks die benötigten API-Calls pro Jahr durchführt. Die geladenen Daten einer Anfrage werden dabei als JSON-Datei (UTF8-Encoding) gespeichert, damit diese zu einem späteren Zeitpunkt nicht erneut geladen werden müssen. 
+In einem ersten Schritt wurde ein API-Fetcher in Python programmiert, der in Form eines Jupyter Notebooks die benötigten API-Calls pro Jahr durchführt. Die geladenen Daten einer Anfrage werden dabei als JSON-Datei (UTF8-Encoding) gespeichert, sodass diese zu einem späteren Zeitpunkt nicht erneut geladen werden müssen. 
 
 Detailliertere Informationen zur Datenbeschaffung (S.1-2): [Dokumentation Datenbeschaffung](./Dokumentation/DokumentationDatenbeschaffung.pdf) </br>
 
