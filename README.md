@@ -41,10 +41,10 @@ Für die Analyse mittels Graphen wurde die freie Software Gephi verwendet. Es we
 Für detailliertere Informationen über die Analysen bitte [Dokumentation Soziale Netzwerkanalyse](./Dokumentation/DokumentationSozialeNetzwerkanalyse.pdf) verwenden.</br>
 
 #### Analyse: Vertrauten Mitspieler
-Bei dieser Untersuchung sollen die Spieler identifiziert werden, welche auf eine grosse bzw. kleine Anzahl vertrauter Mitspieler setzen können. Um eine Aussage diesbezüglich machen zu können, werden zwei folgende Überlegungen über die Spieler-Knoten gemacht:
-• Spieler mit hoher “Degree Centrality” und verhältnismässig niedriger “WeightedDegree Centrality”, wechseln oft das Team und sollten daher eher weniger vertraute Spieler aufweisen.
+Bei dieser Untersuchung sollen die Spieler identifiziert werden, welche auf eine grosse bzw. kleine Anzahl vertrauter Mitspieler setzen können. Um eine Aussage diesbezüglich machen zu können, werden zwei folgende Überlegungen über die Spieler-Knoten gemacht: </br>
+• Spieler mit hoher “Degree Centrality” und verhältnismässig niedriger “WeightedDegree Centrality”, wechseln oft das Team und sollten daher eher weniger vertraute Spieler aufweisen. </br>
 • Spieler mit niedriger “Degree Centrality” und verhältnismässig hoher “WeightedDegree Centrality”, bleiben ihrem Team eher treu und sollten daher auch eher eine
-hohe Anzahl vertrauter Spieler aufweisen.
+hohe Anzahl vertrauter Spieler aufweisen. </br>
 
 ![VertrauteMitspieler](./TrustedPlayer.jpg)
 
