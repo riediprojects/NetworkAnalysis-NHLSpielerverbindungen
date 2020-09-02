@@ -1,8 +1,8 @@
-# Netzwerk Analyse für NHL Spieler
+# Netzwerk Analyse: NHL Spieler
 
 ## Kurz
 ### Ziel
-Aus verschiedenen Datenquellen werden ca. 456'750 Datensätze aus der NHL-API verarbeitet. Diese Datensätze enthalten Infomrationen zu Spielern, Teams und Seasons. 
+Aus verschiedenen Datenquellen werden ca. 456'750 Datensätze aus der NHL-API verarbeitet. Diese Datensätze enthalten Informationen zu Spielern, Teams und Seasons. 
 Die Informationen sollen mittels einer Netzwerkanalyse beispielsweise so analysiert werden, dass Spieler, die ihrem Verein über eine längere Zeit treu blieben, identifiziert werden können. 
 
 ![Titelbild](TitleImage.jpg)
